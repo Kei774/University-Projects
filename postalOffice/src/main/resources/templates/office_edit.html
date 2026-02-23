@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Office</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <style>
+      /* Add a subtle background color to the body for better contrast */
+      body {
+        background-color: #f8f9fa;
+      }
+      /* Center the form and give it a max-width for better readability on large screens */
+      .form-container {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5 form-container">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Edit The Office</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text text-muted">
+            Please fill out the details to edit the office location.
+          </p>
+
+          <form
+            th:action="@{/office/save}"
+            th:object="${office}"
+            method="post"
+            class="needs-validation"
+            novalidate>
+            <input type="hidden" th:field="*{officeId}" />
+
+            <div class="mb-4">
+              <label for="officeName" class="form-label">Office Name</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-building"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="officeName"
+                  placeholder="e.g., Colombo Main Branch"
+                  th:field="*{officeName}"
+                  required />
+                <div class="invalid-feedback">
+                  Please provide a valid office name.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="district" class="form-label">District</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-geo-alt-fill"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="district"
+                    placeholder="e.g., Colombo"
+                    th:field="*{district}"
+                    required />
+                  <div class="invalid-feedback">District is required.</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="province" class="form-label">Province</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-map-fill"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="province"
+                    placeholder="e.g., Western"
+                    th:field="*{province}"
+                    required />
+                  <div class="invalid-feedback">Province is required.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="telephone" class="form-label">Telephone Number</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-telephone-fill"></i
+                ></span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telephone"
+                  placeholder="e.g., 0112345678"
+                  th:field="*{telephone}"
+                  required
+                  pattern="[0-9]{10}" />
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit phone number.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="active" class="form-label">Status</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                <select class="form-select" id="active" th:field="*{active}">
+                  <option value="true" selected>Active</option>
+                  <option value="false">Inactive</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <div class="d-flex justify-content-end">
+              <a th:href="@{/office/list}" class="btn btn-secondary me-2"
+                >Cancel</a
+              >
+              <button type="submit" class="btn btn-primary">Save Office</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

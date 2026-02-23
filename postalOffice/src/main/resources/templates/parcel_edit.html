@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit the Parcel</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <style>
+      /* Add a subtle background color to the body for better contrast */
+      body {
+        background-color: #f8f9fa;
+      }
+      /* Center the form and give it a max-width for better readability on large screens */
+      .form-container {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5 form-container">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0">Edit the Parcel</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text text-muted">
+            Enter the details for the parcel to be edited.
+          </p>
+
+          <form
+            th:action="@{/history/save}"
+            th:object="${parcel}"
+            method="post"
+            class="needs-validation"
+            novalidate>
+            <input type="hidden" th:field="*{parcelId}" />
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="sender" class="form-label">Sender Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-person-up"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="sender"
+                    placeholder="Full name of the sender"
+                    th:field="*{senderName}"
+                    required />
+                  <div class="invalid-feedback">Sender's name is required.</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="receiver" class="form-label">Receiver Name</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-person-down"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="receiver"
+                    placeholder="Full name of the receiver"
+                    th:field="*{receiverName}"
+                    required />
+                  <div class="invalid-feedback">
+                    Receiver's name is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-rulers"></i
+                  ></span>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    class="form-control"
+                    id="weight"
+                    placeholder="e.g., 1.5"
+                    th:field="*{weight}"
+                    required />
+                  <div class="invalid-feedback">
+                    Please enter a valid weight.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="category" class="form-label">Category</label>
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="bi bi-tags-fill"></i
+                  ></span>
+                  <select
+                    class="form-select"
+                    id="category"
+                    th:field="*{category}">
+                    <option value="Document">Document</option>
+                    <option value="Parcel">Parcel</option>
+                    <option value="Fragile">Fragile</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="postOffice" class="form-label"
+                >Assigned Post Office</label
+              >
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-mailbox"></i
+                ></span>
+                <select
+                  class="form-select"
+                  id="postOffice"
+                  th:field="*{assignedPostOffice}">
+                  <option
+                    th:each="office : ${office}"
+                    th:value="${office.officeId}"
+                    th:text="${office.officeName}"></option>
+                </select>
+                <div class="invalid-feedback">
+                  You must assign a post office.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="status" class="form-label">Initial Status</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-truck"></i
+                ></span>
+                <select class="form-select" id="status" th:field="*{status}">
+                  <option value="Registered" selected>Registered</option>
+                  <option value="In Transit">In Transit</option>
+                  <option value="Delivered">Delivered</option>
+                  <option value="Returned">Returned</option>
+                  <option value="On Hold">On Hold</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <div class="d-flex justify-content-end">
+              <a th:href="@{/parcel/list}" class="btn btn-secondary me-2"
+                >Cancel</a
+              >
+              <button type="submit" class="btn btn-primary">Save Parcel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

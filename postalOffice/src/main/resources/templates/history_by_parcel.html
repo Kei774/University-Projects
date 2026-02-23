@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 30px;
+        background-color: #f8f9fa; /* Very light background */
+        color: #343a40;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px; /* Circular corners for the container */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+      }
+      table {
+        width: 100%;
+        border-collapse: separate; /* Use separate for rounded borders */
+        border-spacing: 0; /* Remove space between cells */
+        margin-top: 25px;
+        border-radius: 10px; /* Circular corners for the entire table */
+        overflow: hidden; /* Ensures corners are respected */
+      }
+      th,
+      td {
+        border: none; /* Remove individual cell borders */
+        padding: 12px 15px;
+        text-align: left;
+      }
+      th {
+        background-color: #e9ecef; /* Lighter header background */
+        color: #495057;
+        font-weight: 600; /* Slightly bolder */
+        text-transform: uppercase;
+        font-size: 0.9em;
+        letter-spacing: 0.5px;
+      }
+      td {
+        background-color: #ffffff; /* White background for data cells */
+        border-bottom: 1px solid #dee2e6; /* Light separator line */
+      }
+      tr:last-child td {
+        border-bottom: none; /* No border for the last row */
+      }
+      tr:hover td {
+        background-color: #f0f8ff; /* Very light blue on hover */
+        cursor: pointer;
+      }
+      h2 {
+        color: #212529;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+      }
+      /* Specific rounded corners for top/bottom table cells */
+      table thead tr th:first-child {
+        border-top-left-radius: 10px;
+      }
+      table thead tr th:last-child {
+        border-top-right-radius: 10px;
+      }
+      table tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 10px;
+      }
+      table tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 10px;
+      }
+    </style>
+    <title>Parcel History</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Parcel History Overview</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>History ID</th>
+            <th>Parcel ID</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="history : ${historyList}">
+            <td th:text="${history.id}"></td>
+            <td th:text="${history.parcel.parcelId}"></td>
+            <td th:text="${history.location}"></td>
+            <td th:text="${history.status}"></td>
+            <td th:text="${history.updatedAt}"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
