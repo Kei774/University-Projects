@@ -1,0 +1,291 @@
+{
+	"properties": [
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":3,
+			"price":750000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
+			"picture":"images/prop1.jpg",
+            "images": [
+            "images/prop1/bedroom1.jpg",
+            "images/prop1/bedroom2.jpg",
+            "images/prop1/bedroom3.jpg",
+            "images/prop1/bedroom.jpg",
+            "images/prop1/kitchen.jpg",
+            "images/prop1/livingroom.jpg"
+            ],
+			"url":"properties/prop1.html",
+            "added": {
+                "month":"October",
+                "day":12,
+                "year":2022
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flat",
+            "bedrooms":2,
+			"price":399995,
+			"tenure":"Freehold",
+			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/prop2.jpg",
+            "images": [
+            "images/prop2/bedroom1.jpg",
+            "images/prop2/bedroom2.jpg",
+            "images/prop2/bedroom3.jpg",
+            "images/prop2/bedroom.jpg",
+            "images/prop2/kitchen.jpg",
+            "images/prop2/livingroom.jpg"
+            ],
+			"url":"properties/prop2.html",
+            "added": {
+                "month":"September",
+                "day":14,
+                "year":2022
+            }
+        },
+        {
+            "id": "prop3",
+            "type": "House",
+            "bedrooms": 4,
+            "price": 925000,
+            "tenure": "Freehold",
+            "description": "Spacious four bedroom detached family home located in a quiet cul-de-sac. The property features a generous living room with bay window, separate dining room, modern fitted kitchen with granite worktops, and a study/office. Upstairs there are four well-proportioned bedrooms including a master suite with en-suite shower room, plus a family bathroom. Externally there is a double garage, landscaped rear garden with patio area, and off-street parking for multiple vehicles. The property benefits from recently installed solar panels and underfloor heating on the ground floor.",
+            "location": "Beechwood Avenue, Chislehurst BR7",
+            "picture": "images/prop3.jpg",
+            "images": [
+            "images/prop3/bedroom1.jpg",
+            "images/prop3/bedroom2.jpg",
+            "images/prop3/bedroom3.jpg",
+            "images/prop3/bedroom.jpg",
+            "images/prop3/kitchen.jpg",
+            "images/prop3/livingroom.jpg"
+            ],
+            "url": "properties/prop3.html",
+            "added": {
+                "month": "November",
+                "day": 5,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop4",
+            "type": "Flat",
+            "bedrooms": 1,
+            "price": 275000,
+            "tenure": "Leasehold",
+            "description": "Modern one bedroom apartment situated on the third floor of a secure development with lift access. The property comprises a bright open plan living area with fitted kitchen including integrated appliances, a double bedroom with fitted wardrobes, and a contemporary bathroom with shower over bath. The development features secure entry system, allocated parking space, and beautifully maintained communal gardens. Located just 0.3 miles from Bromley South station with excellent transport links to central London.",
+            "location": "High Street, Bromley BR1",
+            "picture": "images/prop4.jpg",
+            "images": [
+            "images/prop4/bedroom1.jpg",
+            "images/prop4/bedroom2.jpg",
+            "images/prop4/bedroom3.jpg",
+            "images/prop4/bedroom.jpg",
+            "images/prop4/kitchen.jpg",
+            "images/prop4/livingroom.jpg"
+            ],
+            "url": "properties/prop4.html",
+            "added": {
+                "month": "August",
+                "day": 22,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop5",
+            "type": "House",
+            "bedrooms": 5,
+            "price": 1250000,
+            "tenure": "Freehold",
+            "description": "Substantial five bedroom Edwardian detached house offering generous accommodation over three floors. This period property retains many original features including high ceilings, decorative cornices, and bay windows while being fully modernized. Features include a grand entrance hall, three reception rooms, bespoke fitted kitchen/breakfast room, utility room, and cellar. The first and second floors provide five bedrooms, two en-suite bathrooms, and a family bathroom. The property sits on a generous plot with established rear garden, summer house, and front driveway with electric vehicle charging point.",
+            "location": "The Manor House, Farnborough BR6",
+            "picture": "images/prop5.jpg",
+            "images": [
+            "images/prop5/bedroom1.jpg",
+            "images/prop5/bedroom2.jpg",
+            "images/prop5/bedroom3.jpg",
+            "images/prop5/bedroom4.jpg",
+            "images/prop5/kitchen.jpg",
+            "images/prop5/livingroom.jpg"
+            ],
+            "url": "properties/prop5.html",
+            "added": {
+                "month": "December",
+                "day": 3,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop6",
+            "type": "Flat",
+            "bedrooms": 2,
+            "price": 450000,
+            "tenure": "Leasehold",
+            "description": "Luxury two bedroom penthouse apartment with stunning panoramic views. This top-floor property features a large open plan living area with floor-to-ceiling windows, designer kitchen with premium appliances, and a spacious terrace. The master bedroom features an en-suite bathroom with underfloor heating, and both bedrooms have fitted wardrobes. The development offers 24-hour concierge, gym, swimming pool, and secure underground parking. Located in the heart of Orpington town centre with immediate access to shopping, dining, and transport links.",
+            "location": "High Street, Orpington BR6",
+            "picture": "images/prop6.jpg",
+            "images": [
+            "images/prop6/bedroom1.jpg",
+            "images/prop6/bedroom2.jpg",
+            "images/prop6/bedroom3.jpg",
+            "images/prop6/bedroom.jpg",
+            "images/prop6/kitchen.jpg",
+            "images/prop6/livingroom.jpg"
+            ],
+            "url": "properties/prop6.html",
+            "added": {
+                "month": "October",
+                "day": 28,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop7",
+            "type": "House",
+            "bedrooms": 3,
+            "price": 650000,
+            "tenure": "Freehold",
+            "description": "Charming three bedroom end-of-terrace Victorian cottage located in a conservation area. This character property features exposed wooden floors, original fireplaces, and period details throughout. The accommodation includes a cozy living room with wood burner, dining room, updated kitchen with shaker-style units, and a conservatory overlooking the garden. Upstairs are three bedrooms and a family bathroom. The property benefits from a private rear garden with decking area and brick-built storage shed. Situated within walking distance of local schools and parks.",
+            "location": "Cottage Lane, Sidcup DA14",
+            "picture": "images/prop7.jpg",
+            "images": [
+            "images/prop7/bedroom1.jpg",
+            "images/prop7/bedroom2.jpg",
+            "images/prop7/bedroom3.jpg",
+            "images/prop7/bedroom.jpg",
+            "images/prop7/kitchen.jpg",
+            "images/prop7/livingroom.jpg"
+            ],
+            "url": "properties/prop7.html",
+            "added": {
+                "month": "July",
+                "day": 15,
+                "year": 2022
+            }
+        },
+        {
+        "id": "prop8",
+        "type": "House",
+        "bedrooms": 4,
+        "price": 825000,
+        "tenure": "Freehold",
+        "description": "Spacious four bedroom Edwardian semi-detached family home offering generous living accommodation. The property boasts high ceilings, ornate cornicing, and bay windows. Comprising a welcoming entrance hall, front reception room with feature fireplace, separate dining room, and a modern kitchen-diner with integrated appliances and bi-fold doors to the garden. The first floor provides four good-sized bedrooms and a contemporary family bathroom. Externally, there is a south-facing rear garden with patio area and established planting. Excellent location close to transport links and amenities.",
+        "location": "The Avenue, Chislehurst BR7",
+        "picture": "images/prop8.jpg",
+        "images": [
+        "images/prop8/bedroom1.jpg",
+        "images/prop8/bedroom2.jpg",
+        "images/prop8/bedroom3.jpg",
+        "images/prop8/bedroom.jpg",
+        "images/prop8/kitchen.jpg",
+        "images/prop8/livingroom.jpg"
+        ],
+        "url": "properties/prop8.html",
+        "added": {
+            "month": "August",
+            "day": 3,
+            "year": 2022
+        }
+    },
+    {
+        "id": "prop9",
+        "type": "House",
+        "bedrooms": 2,
+        "price": 495000,
+        "tenure": "Leasehold",
+        "description": "A beautifully presented two bedroom mid-terrace Victorian cottage, recently refurbished to a high standard. This charming home combines period charm with modern living, featuring an open-plan kitchen/living area with engineered oak flooring, a stylish kitchen with quartz worktops, and a separate utility room. The first floor offers two double bedrooms and a luxurious bathroom with freestanding tub. The property includes a low-maintenance courtyard garden. Located in a popular residential area within easy reach of local shops and the station.",
+        "location": "Park Road, Bexleyheath DA6",
+        "picture": "images/prop9.jpg",
+        "images": [
+        "images/prop9/bedroom1.jpg",
+        "images/prop9/bedroom2.jpg",
+        "images/prop9/bedroom3.jpg",
+        "images/prop9/bedroom.jpg",
+        "images/prop9/kitchen.jpg",
+        "images/prop9/livingroom.jpg"
+        ],
+        "url": "properties/prop9.html",
+        "added": {
+            "month": "June",
+            "day": 22,
+            "year": 2022
+        }
+    },
+    {
+        "id": "prop10",
+        "type": "House",
+        "bedrooms": 5,
+        "price": 1100000,
+        "tenure": "Freehold",
+        "description": "An impressive five bedroom detached family residence set on a generous plot within a sought-after private road. This substantial property offers versatile living space including a grand entrance hall, formal drawing room, study, family room, and a stunning open-plan kitchen/breakfast room with a separate utility. The first floor comprises five well-proportioned bedrooms, with the principal suite featuring a dressing area and en-suite shower room. The mature rear garden includes a large patio, lawn, and mature trees providing privacy. Off-street parking for multiple vehicles.",
+        "location": "Woodland Drive, Petts Wood BR5",
+        "picture": "images/prop10.jpg",
+        "images": [
+        "images/prop10/bedroom1.jpg",
+        "images/prop10/bedroom2.jpg",
+        "images/prop10/bedroom3.jpg",
+        "images/prop10/bedroom.jpg",
+        "images/prop10/kitchen.jpg",
+        "images/prop10/livingroom.jpg"
+        ],
+        "url": "properties/prop10.html",
+        "added": {
+            "month": "September",
+            "day": 12,
+            "year": 2022
+        }
+    },
+    {
+        "id": "prop11",
+        "type": "House",
+        "bedrooms": 3,
+        "price": 575000,
+        "tenure": "Freehold",
+        "description": "A delightful three bedroom end-of-terrace cottage full of character, situated on a quiet cul-de-sac. The property features a charming living room with log burner and beamed ceiling, a separate dining room, and a fitted kitchen with access to the garden. Upstairs are three bedrooms and a family bathroom. Outside, the west-facing rear garden is a particular feature with a raised deck, lawn, and brick outbuilding. This charming home is located within the catchment area for excellent schools and offers a real sense of community.",
+        "location": "Orchard Close, Welling DA16",
+        "picture": "images/prop11.jpg",
+        "images": [
+        "images/prop11/bedroom1.jpg",
+        "images/prop11/bedroom2.jpg",
+        "images/prop11/bedroom3.jpg",
+        "images/prop11/bedroom.jpg",
+        "images/prop11/kitchen.jpg",
+        "images/prop11/livingroom.jpg"
+        ],
+        "url": "properties/prop11.html",
+        "added": {
+            "month": "July",
+            "day": 28,
+            "year": 2022
+        }
+    },
+    {
+        "id": "prop12",
+        "type": "House",
+        "bedrooms": 4,
+        "price": 950000,
+        "tenure": "Freehold",
+        "description": "A substantial four bedroom Victorian villa offering well-proportioned accommodation over three floors. Retaining many original features including fireplaces, ceiling roses, and stripped wooden doors. The ground floor comprises a reception hall, two elegant reception rooms, and a kitchen/breakfast room. The first floor offers three bedrooms and a family bathroom, with a further bedroom and shower room on the second floor. The property benefits from a large rear garden with mature trees and a detached garage. A prime location within walking distance of the high street and mainline station.",
+        "location": "Station Road, Bromley BR1",
+        "picture": "images/prop12.jpg",
+        "images": [
+        "images/prop12/bedroom1.jpg",
+        "images/prop12/bedroom2.jpg",
+        "images/prop12/bedroom3.jpg",
+        "images/prop12/bedroom.jpg",
+        "images/prop12/kitchen.jpg",
+        "images/prop12/livingroom.jpg"
+        ],
+        "url": "properties/prop12.html",
+        "added": {
+            "month": "August",
+            "day": 19,
+            "year": 2022
+        }
+    }    
+]}
