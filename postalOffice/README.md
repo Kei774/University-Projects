@@ -98,7 +98,7 @@ I learned how to:
  
 How to Run
 1.	Clone the repository
-git clone <your-repo-link>
+git clone https://github.com/Kei774/University-Projects.git
 2.	Navigate to the project folder
 cd postalOffice
 3.	Run the application
